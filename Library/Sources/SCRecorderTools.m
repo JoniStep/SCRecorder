@@ -59,6 +59,11 @@
 }
 
 + (NSString *)captureSessionPresetForDimension:(CMVideoDimensions)videoDimension {
+#ifdef is_iOS9
+    if (videoDimension.width >= 3840 && videoDimension.height >= 2160) {
+        return AVCaptureSessionPreset3840x2160;
+    }
+#endif
     if (videoDimension.width >= 1920 && videoDimension.height >= 1080) {
         return AVCaptureSessionPreset1920x1080;
     }
