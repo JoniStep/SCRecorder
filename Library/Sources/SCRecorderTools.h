@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
-#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
-#define is_iOS7 SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")
-#define is_iOS8 SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")
-#define is_iOS9 SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")
-#define is_iOS10 SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"10.0")
+#define SC_OS_GREATER_THAN_OR_EQUAL_TO(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
+#define SC_IS_IOS7 SC_OS_GREATER_THAN_OR_EQUAL_TO(@"7.0")
+#define SC_IS_IOS8 SC_OS_GREATER_THAN_OR_EQUAL_TO(@"8.0")
+#define SC_IS_IOS9 SC_OS_GREATER_THAN_OR_EQUAL_TO(@"9.0")
+#define SC_IS_IOS10 SC_OS_GREATER_THAN_OR_EQUAL_TO(@"10.0")
 
 
 @interface SCRecorderTools : NSObject
